@@ -1,0 +1,9 @@
+<nav class="navbar navbar-default navbar-custom" role="navigation">
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right" ng-repeat="menu in navCtrl.navigationMenus | orderBy:'-'">
+      <li>
+        <a href="{{menu.navLink}}">{{menu.navTitle}}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
