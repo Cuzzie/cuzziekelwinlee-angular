@@ -1,0 +1,19 @@
+<div id="working-experience" class="working-experience">
+    <div class="working-experience-container container">
+        <h2>{{workingExperienceCtrl.workingExperience.title}}</h2>
+        <div class="job-experience row" ng-repeat="experience in workingExperienceCtrl.workingExperience.experiences">
+            <div class="job-role col-md-4">
+                <h4>{{experience.company}}</h4>
+                <p>{{experience.role}}</p>
+                <p>{{experience.duration}}</p>
+                <span class="job-link">
+                    <span class="glyphicon glyphicon-link"/>
+                    <a ng-href="{{experience.companyLink}}" target="_blank">{{experience.companyLink}}</a>
+                </span>
+            </div>
+            <div class="job-description col-md-8">
+                <p ng-repeat="description in experience.descriptions">{{description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
